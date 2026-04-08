@@ -18,7 +18,7 @@
       </p>
 
       <p>
-        Welcome! I'm a Ph.D. candidate in Economics at University of Michigan.
+        Welcome! I'm a Ph.D. candidate in Economics at the University of Michigan.
       </p>
 
       <p>
@@ -32,14 +32,16 @@
 
       <article class="paper">
         <h3>Sectoral Aggregation and Misallocation from Variable Markups</h3>
-        <p class="paper-subtitle">Award: Outstanding Third Year Paper</p>
-        <p>
-          <a href="files/AB_SectoralAggregation.pdf" target="_blank">[Latest version]</a>
-        </p>
-        <button class="abstract-toggle" type="button" aria-expanded="false">
-          <span class="arrow" aria-hidden="true">&#9656;</span>
-          <span>Abstract</span>
-        </button>
+        <ul class="paper-meta">
+          <li>Award: University of Michigan Outstanding Third Year Paper</li>
+          <li><a href="files/AB_SectoralAggregation.pdf" target="_blank">[Latest Version]</a></li>
+          <li class="abstract-meta-item">
+            <button class="abstract-toggle" type="button" aria-expanded="false">
+              <span class="arrow" aria-hidden="true">&#9656;</span>
+              <span>Abstract</span>
+            </button>
+          </li>
+        </ul>
         <div class="abstract-content" hidden>
           <p>
             This paper studies how sectoral aggregation affects misallocation estimates in models with variable markups. In a nested CES framework with oligopolistic competition, misallocation depends on markup dispersion within and across sectors, weighted by substitution elasticities. Applying this to European firm-level data reveals two countervailing biases. First, higher aggregation (for example, grouping meat and bakery into a broader food sector) mechanically smooths out dispersion, reducing measured misallocation. Second, aggregation biases down estimated elasticities. The mechanical bias typically dominates: using aggregated sectoral definitions leads to a quantitatively significant underestimation of aggregate productivity losses.
@@ -54,7 +56,7 @@
       <h2>Work in Progress</h2>
 
       <article class="paper">
-        <h3>Growth, Competition and Spillovers in the Innovation Space</h3>
+        <h3>Competition, Spillovers and Growth in the Innovation Space</h3>
       
       </article>
     </section>
@@ -63,16 +65,18 @@
       <h2>Pre-doctoral Work</h2>
 
       <article class="paper">
-        <h3>Presidential Approval in Peru: An Empirical Analysis using a Fractionally Cointegrated VAR</h3>
-        <p>
-          <a href="https://doi.org/10.1007/s10644-021-09374-0" target="_blank">[Published Version]</a>
-        </p>
+        <h3>Presidential Approval in Peru: An Empirical Analysis using a Fractionally Cointegrated VAR <span class="coauthor">(with <a href="https://scholar.google.com/citations?user=5CLCLBgAAAAJ&hl=es" target="_blank">Gabriel Rodriguez</a>)</span></h3>
+        <ul class="paper-meta">
+          <li><em>Economic Change and Restructuring</em>, 2022.</li>
+          <li><a href="https://doi.org/10.1007/s10644-021-09374-0" target="_blank">[Published Version]</a></li>
+        </ul>
       </article>
             <article class="paper">
         <h3>Firms, Workers and Informality: Evidence from Peru</h3>
-        <p>
-          <a href="https://repositorio.sunedu.gob.pe/backend/api/core/bitstreams/73bf95ec-d393-4d60-878d-f3b8a3e9e874/content">[Link]</a>
-        </p>
+        <ul class="paper-meta">
+          <li>MSc Economics dissertation, University College London, 2021.</li>
+          <li><a href="https://repositorio.sunedu.gob.pe/backend/api/core/bitstreams/73bf95ec-d393-4d60-878d-f3b8a3e9e874/content">[Link]</a></li>
+        </ul>
       </article>
 
     </section>
@@ -82,8 +86,13 @@
   <script>
     document.querySelectorAll(".abstract-toggle").forEach((button) => {
       button.addEventListener("click", () => {
-        const content = button.nextElementSibling;
+        const paper = button.closest(".paper");
+        const content = paper ? paper.querySelector(".abstract-content") : null;
         const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+        if (!content) {
+          return;
+        }
 
         button.setAttribute("aria-expanded", String(!isExpanded));
         content.hidden = isExpanded;

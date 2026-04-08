@@ -1,0 +1,159 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.65in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{newpxtext,newpxmath}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{setspace}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.03}
+
+\definecolor{linkblue}{HTML}{0B63B6}
+\definecolor{rulegray}{HTML}{CDD3DB}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkblue,
+  linkcolor=linkblue
+}
+
+\titleformat{\section}
+  {\large\bfseries\scshape}
+  {}
+  {0pt}
+  {}
+  [\vspace{0.2em}\titlerule]
+
+\titlespacing*{\section}{0pt}{1.05em}{0.45em}
+
+\setlist[itemize]{
+  leftmargin=2.5em,
+  itemsep=0.18em,
+  topsep=0.2em,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\newlength{\entryindent}
+\setlength{\entryindent}{1.35em}
+
+\newcommand{\nameheader}[1]{
+  {\LARGE\bfseries #1}\par
+}
+
+\newcommand{\contactline}[1]{
+  \vspace{0.25em}
+  {\small #1}\par
+}
+
+\newcommand{\cvsubsection}[1]{
+  \vspace{0.7em}
+  {\small\sffamily\bfseries\MakeUppercase{#1}}\par
+  \vspace{0.45em}
+}
+
+\newcommand{\datedline}[2]{
+  \noindent\hspace*{\entryindent}%
+  \begin{tabularx}{\dimexpr\textwidth-\entryindent\relax}{@{}Xr@{}}
+    #1 & #2
+  \end{tabularx}\par
+}
+
+\newcommand{\papertitle}[1]{
+  \noindent\hspace*{\entryindent}%
+  \parbox[t]{\dimexpr\textwidth-\entryindent\relax}{\normalsize #1}\par
+}
+
+\newcommand{\detail}[1]{
+  \noindent\hspace*{\entryindent}%
+  \parbox[t]{\dimexpr\textwidth-\entryindent\relax}{\small #1}\par
+}
+
+\begin{document}
+
+\nameheader{Alexander Boca}
+\contactline{+1-734-496-5349 \quad | \quad \href{mailto:aboca@umich.edu}{aboca@umich.edu} \quad | \quad \href{https://alexanderboca.github.io}{alexanderboca.github.io}}
+
+\section*{Education}
+\datedline{Ph.D., Economics, University of Michigan}{Expected 2028}
+\datedline{M.Sc., Economics, University College London (\textit{Distinction})}{2021}
+\datedline{B.A., Economics, Pontificia Universidad Catolica del Peru (\textit{Valedictorian})}{2018}
+
+\section*{Research Fields}
+Macroeconomics, International Economics
+
+\section*{Research}
+
+\cvsubsection{Working Paper}
+\papertitle{Sectoral Aggregation and Misallocation from Variable Markups}
+\begin{itemize}
+  \item Outstanding Third-Year Paper Award, University of Michigan (2025)
+  \item \href{https://alexanderboca.github.io/files/AB_SectoralAggregation.pdf}{Latest version}
+\end{itemize}
+
+\cvsubsection{Work in Progress}
+\papertitle{Competition, Spillovers and Growth in the Innovation Space}
+
+\cvsubsection{Publications and Earlier Work}
+\datedline{Presidential Approval in Peru: An Empirical Analysis Using a FCVAR}{2022}
+\detail{with Gabriel Rodriguez}
+\begin{itemize}
+  \item \textit{Economic Change and Restructuring} 55, 1973--2010
+  \item \href{https://doi.org/10.1007/s10644-021-09374-0}{Published version}
+\end{itemize}
+
+\datedline{Firms, Workers and Informality: Evidence from Peru}{2021}
+\begin{itemize}
+  \item MSc Economics dissertation, University College London
+  \item \href{https://renati.sunedu.gob.pe/bitstream/renati/3263/1/BocaSaraviaAA.pdf}{Link}
+\end{itemize}
+
+\section*{Research Experience}
+\datedline{Research Seminar in Quantitative Economics (RSQE)}{2026--present}
+\detail{University of Michigan. Research Assistant contributing to RSQE's quarterly U.S. forecast and related macroeconomic analysis.}
+
+\datedline{University of Michigan}{2023, 2024}
+\detail{Research Assistant to Pablo Ottonello and Joel Slemrod.}
+
+\section*{Teaching Experience}
+\datedline{University of Michigan}{2023--2025}
+\detail{Teaching Assistant, Intermediate Microeconomic Theory.}
+
+\datedline{Pontificia Universidad Catolica del Peru}{2018--2021}
+\detail{Teaching Assistant, Time Series Econometrics; Macroeconomics.}
+
+\section*{Professional Experience}
+\datedline{Central Reserve Bank of Peru (BCRP), Senior Analyst}{May 2019--July 2022}
+\detail{Worked across the economic activity, inflation, and fiscal statistics units; prepared macroeconomic expectations reports, sectoral GDP forecasts, and exchange-rate and housing-inflation analysis.}
+
+\section*{Selected Presentations}
+\begin{itemize}
+  \item University of Michigan, Macro/International Lunch \hfill 2025
+  \item University of Michigan, H2D2 Student Workshop \hfill 2024
+  \item Central Reserve Bank of Peru, Macroeconomics Seminar \hfill 2022
+\end{itemize}
+
+\section*{Honors, Fellowships, and Awards}
+\begin{itemize}
+  \item Outstanding Third-Year Paper Award, University of Michigan \hfill 2025
+  \item Graduate Student Fellowship, University of Michigan \hfill 2022, 2023
+  \item Presidente de la Republica Scholarship, Ministry of Education of Peru \hfill 2020
+  \item Academic Excellence Award, PUCP \hfill 2019
+  \item Dintilhac Scholarship, PUCP \hfill 2012
+\end{itemize}
+
+\section*{Additional Information}
+{\bf Software:} Stata, MATLAB, R, Python, EViews, \LaTeX \\
+{\bf Languages:} English (fluent), Spanish (native) \\
+{\bf Citizenship:} Peru
+
+\end{document}
