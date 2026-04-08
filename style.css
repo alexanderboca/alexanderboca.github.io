@@ -108,6 +108,9 @@ p {
 
 .abstract-content p {
   text-align: justify;
+  text-justify: inter-word;
+  text-align-last: left;
+  hyphens: auto;
 }
 
 a {
