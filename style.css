@@ -44,9 +44,44 @@ p {
   margin-bottom: 24px;
 }
 
+.paper-subtitle {
+  margin: 4px 0 10px 0;
+  font-weight: 700;
+}
+
 .label {
   font-weight: 700;
   margin-bottom: 6px;
+}
+
+.abstract-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  margin-top: 4px;
+  border: 0;
+  background: none;
+  color: #0645ad;
+  font: inherit;
+  cursor: pointer;
+}
+
+.abstract-toggle:hover {
+  text-decoration: underline;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.abstract-toggle[aria-expanded="true"] .arrow {
+  transform: rotate(90deg);
+}
+
+.abstract-content {
+  margin-top: 8px;
 }
 
 a {

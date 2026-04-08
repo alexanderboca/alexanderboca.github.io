@@ -25,74 +25,70 @@
         My research interests are in Macroeconomics and Economic Growth.
       </p>
 
-      <p>
-        [Optional short sentence such as job market status, affiliation, or current project.]
-      </p>
     </header>
 
     <section>
       <h2>Working Papers</h2>
 
       <article class="paper">
-        <h3>Title of Paper 1</h3>
+        <h3>Sectoral Aggregation and Misallocation from Variable Markups</h3>
+        <p class="paper-subtitle">Award: Outstanding Third Year Paper</p>
         <p>
-          <a href="https://example.com/paper1.pdf" target="_blank">[Latest version]</a>
+          <a href="files/AB_SectoralAggregation.pdf" target="_blank">[Latest version]</a>
         </p>
-        <p>Job Market Paper</p>
-        <p>
-          Presented at: [Conference 1], [Conference 2], [Conference 3]
-        </p>
-        <p class="label">Abstract</p>
-        <p>
-          Write the abstract here.
-        </p>
+        <button class="abstract-toggle" type="button" aria-expanded="false">
+          <span class="arrow" aria-hidden="true">&#9656;</span>
+          <span>Abstract</span>
+        </button>
+        <div class="abstract-content" hidden>
+          <p>
+            This paper studies how sectoral aggregation affects misallocation estimates in models with variable markups. In a nested CES framework with oligopolistic competition, misallocation depends on markup dispersion within and across sectors, weighted by substitution elasticities. Applying this to European firm-level data reveals two countervailing biases. First, higher aggregation (for example, grouping meat and bakery into a broader food sector) mechanically smooths out dispersion, reducing measured misallocation. Second, aggregation biases down estimated elasticities. The mechanical bias typically dominates: using aggregated sectoral definitions leads to a quantitatively significant underestimation of aggregate productivity losses.
+          </p>
+        </div>
       </article>
 
-      <article class="paper">
-        <h3>Title of Paper 2</h3>
-        <p>
-          <a href="https://example.com/paper2.pdf" target="_blank">[Latest version]</a>
-        </p>
-        <p class="label">Abstract</p>
-        <p>
-          Write the abstract here.
-        </p>
-      </article>
+      
     </section>
 
     <section>
       <h2>Work in Progress</h2>
 
       <article class="paper">
-        <h3>Title of Project 1</h3>
-        <p>
-          <a href="https://example.com/slides.pdf" target="_blank">[Slides]</a>
-        </p>
-        <p>
-          with
-          <a href="https://coauthorwebsite.com" target="_blank">Coauthor Name</a>
-        </p>
-        <p class="label">Abstract</p>
-        <p>
-          Write the abstract here.
-        </p>
+        <h3>Growth, Competition and Spillovers in the Innovation Space</h3>
+      
       </article>
     </section>
 
     <section>
-      <h2>Other Publications</h2>
+      <h2>Pre-doctoral Work</h2>
 
       <article class="paper">
-        <h3>Title of Publication 1</h3>
+        <h3>Presidential Approval in Peru: An Empirical Analysis using a Fractionally Cointegrated VAR</h3>
         <p>
-          <a href="https://example.com/publication1.pdf" target="_blank">[Latest version]</a>
-        </p>
-        <p class="label">Abstract</p>
-        <p>
-          Write the abstract here.
+          <a href="https://doi.org/10.1007/s10644-021-09374-0" target="_blank">[Published Version]</a>
         </p>
       </article>
+            <article class="paper">
+        <h3>Firms, Workers and Informality: Evidence from Peru</h3>
+        <p>
+          <a href="https://repositorio.sunedu.gob.pe/backend/api/core/bitstreams/73bf95ec-d393-4d60-878d-f3b8a3e9e874/content">[Link]</a>
+        </p>
+      </article>
+
     </section>
+
+       
   </main>
+  <script>
+    document.querySelectorAll(".abstract-toggle").forEach((button) => {
+      button.addEventListener("click", () => {
+        const content = button.nextElementSibling;
+        const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+        button.setAttribute("aria-expanded", String(!isExpanded));
+        content.hidden = isExpanded;
+      });
+    });
+  </script>
 </body>
 </html>
