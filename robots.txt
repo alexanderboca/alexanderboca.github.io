@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://alexanderboca.github.io/sitemap.xml
+Sitemap: https://alexanderboca.github.io/sitemap.txt
